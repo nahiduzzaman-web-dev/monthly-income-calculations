@@ -6,29 +6,36 @@
 body{
     font-family: 'Poppins', sans-serif;   
 }
+
 .logo{
     color: 	#ff00ff;
     font-weight: 600;
     font-size: 30px;
 }
+
 .underline{
     border-bottom: 1px solid #ff00ff;
 }
+
 .doller-icon{
     font-size: 160px;
 }
+
 .icon{
     color: 	#ff00ff;
 }
+
 .title-dgn{
     background-color: #ff00ffd7 !important;
     color: #fff !important;
     font-weight:  400 !important;
 }
+
 input:focus{
-    border: 2px solid #ff00ffb2 !important;
+    border: 1px solid #ff00ffb2 !important;
     box-shadow:  none !important;
 }
+
 .btn{
     border: none;
     background-color: #ff00ff !important;
@@ -36,22 +43,41 @@ input:focus{
     padding: 5px 15px;
     font-weight: 600;
 }
+
+.btn:focus{
+    box-shadow: none !important;
+}
+
+.btn:hover{
+    background-color: #fff !important;
+    color: #ff00ff !important;
+    border: 1px solid #ff00ff;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transition: 1s ease-in-out;
+    
+}
+
 .family{
     font-family: 'Lobster', cursive;
     font-family: 'Merriweather Sans', sans-serif;
     font-family: 'Redressed', cursive;
 }
+
 .social-icon{
     color: #ff00ff;
     font-size: 25px;
     margin: 0 5px;
 }
+
 .fa-facebook-f:hover{
     color: blue;
 }
+
 .fa-youtube:hover{
     color: red;
 }
+
 .fa-github:hover{
     color: gray;
 }
