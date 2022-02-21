@@ -109,3 +109,59 @@ close.addEventListener('click', function () {
     warningContainer.style.display = 'none'
 
 })
+
+document.getElementById('save-btn').addEventListener('click', function () {
+
+
+    const saveField = document.getElementById('save');
+    const saveValue = parseInt(saveField.value);
+
+    const incomeFiled = document.getElementById('income-field');
+    const incomeAmount = parseFloat(incomeFiled.value);
+
+
+    let errorSave = document.getElementById('error-save');
+    if (isNaN(saveValue) || saveValue < 0) {
+        errorSave.textContent = "Please enter a valid number";
+        errorSave.style.color = "red";
+        saveField.style.border = '1px solid red';
+    }
+    else {
+        errorSave.textContent = ''
+        errorSave.style.color = "";
+        saveField.style.border = ''
+    }
+    if (saveValue >= 0) {
+        const savingsField = document.getElementById('savings');
+        const save = saveValue / 100 * incomeAmount;
+
+        const remainingField = document.getElementById('remaining-balance');
+        const balanceField = document.getElementById('balance');
+
+        if (balanceField.innerText < save) {
+
+            const saveWarningContainer = document.getElementById('warning-save-container');
+            saveWarningContainer.style.display = 'block';
+        }
+        else {
+
+            savingsField.innerText = save;
+            const remainingBalance = balanceField.innerText - savingsField.innerText;
+            remainingField.innerText = remainingBalance;
+        }
+
+
+    }
+
+
+
+})
+
+// for closed button
+let saveClose = document.getElementById("save-close-btn");
+saveClose.addEventListener('click', function () {
+
+    const saveWarningContainer = document.getElementById('warning-save-container');
+    saveWarningContainer.style.display = 'none';
+
+})
